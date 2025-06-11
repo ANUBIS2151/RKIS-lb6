@@ -1,0 +1,17 @@
+def first_positive_and_last_negative(sequence):
+    first_positive = None
+    last_negative = None
+
+    for number in sequence:
+        if number > 0 and first_positive is None:
+            first_positive = number
+        if number < 0:
+            last_negative = number
+
+    return first_positive, last_negative
+
+sequence = [-3, -1, 4, 3, -5, 1, -2]
+first_positive, last_negative = first_positive_and_last_negative(sequence)
+
+print("Первый положительный элемент:", first_positive)
+print("Последний отрицательный элемент:", last_negative)
